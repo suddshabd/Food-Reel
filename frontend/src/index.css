@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+html,
+body,
+#root {
+  background-color: rgb(15, 23, 42);
+  min-height: 100vh;
+  color: rgb(17, 24, 39);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0;
+  padding: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  html,
+  body,
+  #root {
+    background-color: rgb(3, 7, 18);
+    color: rgb(243, 244, 246);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+
+  html,
+  body,
+  #root {
+    background-color: rgb(15, 23, 42);
+    color: rgb(17, 24, 39);
+  }
+}
