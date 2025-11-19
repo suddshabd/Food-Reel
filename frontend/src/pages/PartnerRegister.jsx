@@ -29,7 +29,7 @@ const PartnerRegister = () => {
 
         setLoading(true);
         try {
-            const res = await axios.post('http://localhost:3000/api/auth/foodpartner/register', {
+            const res = await axios.post('https://food-reel-backend-nine.vercel.app/api/auth/foodpartner/register', {
                 name,
                 email,
                 contactName,

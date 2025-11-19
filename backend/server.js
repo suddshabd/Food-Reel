@@ -5,7 +5,15 @@ dotenv.config({
     path: './.env'
 })
 connectDB();
-app.listen(3000, () => {
-    console.log("sever is running on port 3000")
-    // console.log(process.env.MONGODB_URL)
-})
+
+const PORT = process.env.PORT || 3000;
+
+// Only start the server if this file is run directly (e.g., `npm run dev`)
+// and not when imported by Vercel's serverless function handler.
+if (process.env.NODE_ENV !== 'production' || process.env.VERCEL_ENV === 'development') {
+    app.listen(PORT, () => {
+        console.log(`Server is running on port ${PORT}`);
+    });
+}
+
+export default app;
