@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon  -r dotenv/config --experimental-json-modules  server.js",
-    "build": "node server.js"
+    "build": "node -r dotenv/config --experimental-json-modules server.js"
   },
   "author": "",
   "license": "ISC",
